@@ -15,7 +15,7 @@ import java.io.IOException;
 public class ParsingFromTXT {
 
     public static void main(String[] args) throws IOException {
-        String request = "parsingFromTXT.txt";
+        String request = "src/homeTask/task2/xml/parsingFromTXT.txt";
         String result = text(request);
 
         Gson gson = new GsonBuilder().create();

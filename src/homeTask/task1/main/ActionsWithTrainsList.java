@@ -13,7 +13,7 @@ import homeTask.task1.showAndAdd.TrainsToday;
 public class ActionsWithTrainsList {
 
     public static void main(String[] args) throws Exception {
-        String fileName = "trainsList.xml";
+        String fileName = "src/homeTask/task1/xml/trainsList.xml";
 
         TrainsToday trainsToday = new TrainsToday();
         trainsToday.show(fileName);
