@@ -1,5 +1,11 @@
 package homeTask.task1.objects;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlRootElement(name = "train")
+@XmlType(propOrder = {"from", "to", "date", "departure"})
 public class Train {
 
     private String from;
@@ -18,10 +24,16 @@ public class Train {
         this.departure = departure;
     }
 
+    @Override
+    public String toString() {
+        return "From: " + from + "\nTo: " + to + "\nDate: " + date + "\nDeparture: " + departure + "\n===========>>>>";
+    }
+
     public String getFrom() {
         return from;
     }
 
+    @XmlElement
     public void setFrom(String from) {
         this.from = from;
     }
@@ -30,6 +42,7 @@ public class Train {
         return to;
     }
 
+    @XmlElement
     public void setTo(String to) {
         this.to = to;
     }
@@ -38,6 +51,7 @@ public class Train {
         return date;
     }
 
+    @XmlElement
     public void setDate(String date) {
         this.date = date;
     }
@@ -46,6 +60,7 @@ public class Train {
         return departure;
     }
 
+    @XmlElement
     public void setDeparture(String departure) {
         this.departure = departure;
     }
